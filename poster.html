@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+	<head>		<!-- Head 	-->
+		<meta charset="utf-8"/>
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <style>
+        .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "at a1 a2 a3 a4 a5 a6 a7 a8 a9"
+          "a10 a11 a12 bt b1 b2 b3 b4 b5 b6"
+          "b7 b8 b9 b10 b11 b12 b13 ct c1 c2"
+          "c3 c4 c5 c6 c7 c8 c9 c10 c11 c12"
+          "c13 c14 c15 c16 c17 c18 c19 c20 c21 c22"
+          "c23 c24 c25 c26 c27 c28 c29 c30 c31 winhoff";
+      }
+
+      .at {
+        grid-area: at;
+      }
+
+      .a1 {
+        grid-area: a1;
+      }
+
+      .a2 {
+        grid-area: a2;
+      }
+
+      .a3 {
+        grid-area: a3;
+      }
+
+      .a4 {
+        grid-area: a4;
+      }
+
+      .a5 {
+        grid-area: a5;
+      }
+
+      .a6 {
+        grid-area: a6;
+      }
+
+      .a7 {
+        grid-area: a7;
+      }
+
+      .a8 {
+        grid-area: a8;
+      }
+
+      .a9 {
+        grid-area: a9;
+      }
+
+      .winhoff {
+        grid-area: winhoff;
+      }
+
+      .a10 {
+        grid-area: a10;
+      }
+
+      .a11 {
+        grid-area: a11;
+      }
+
+      .a12 {
+        grid-area: a12;
+      }
+
+      .bt {
+        grid-area: bt;
+      }
+
+      .b1 {
+        grid-area: b1;
+      }
+
+      .b2 {
+        grid-area: b2;
+      }
+
+      .b3 {
+        grid-area: b3;
+      }
+
+      .b4 {
+        grid-area: b4;
+      }
+
+      .b5 {
+        grid-area: b5;
+      }
+
+      .b6 {
+        grid-area: b6;
+      }
+
+      .b7 {
+        grid-area: b7;
+      }
+
+      .b8 {
+        grid-area: b8;
+      }
+
+      .b9 {
+        grid-area: b9;
+      }
+
+      .b10 {
+        grid-area: b10;
+      }
+
+      .b11 {
+        grid-area: b11;
+      }
+
+      .b12 {
+        grid-area: b12;
+      }
+
+      .b13 {
+        grid-area: b13;
+      }
+
+      .ct {
+        grid-area: ct;
+      }
+
+      .c1 {
+        grid-area: c1;
+      }
+
+      .c2 {
+        grid-area: c2;
+      }
+
+      .c3 {
+        grid-area: c3;
+      }
+
+      .c4 {
+        grid-area: c4;
+      }
+
+      .c5 {
+        grid-area: c5;
+      }
+
+      .c6 {
+        grid-area: c6;
+      }
+
+      .c7 {
+        grid-area: c7;
+      }
+
+      .c8 {
+        grid-area: c8;
+      }
+
+      .c9 {
+        grid-area: c9;
+      }
+
+      .c10 {
+        grid-area: c10;
+      }
+
+      .c11 {
+        grid-area: c11;
+      }
+
+      .c12 {
+        grid-area: c12;
+      }
+
+      .c13 {
+        grid-area: c13;
+      }
+
+      .c22 {
+        grid-area: c22;
+      }
+
+      .c14 {
+        grid-area: c14;
+      }
+
+      .c15 {
+        grid-area: c15;
+      }
+
+      .c16 {
+        grid-area: c16;
+      }
+
+      .c17 {
+        grid-area: c17;
+      }
+
+      .c18 {
+        grid-area: c18;
+      }
+
+      .c19 {
+        grid-area: c19;
+      }
+
+      .c20 {
+        grid-area: c20;
+      }
+
+      .c21 {
+        grid-area: c21;
+      }
+
+      .c23 {
+        grid-area: c23;
+      }
+
+      .c31 {
+        grid-area: c31;
+      }
+
+      .c24 {
+        grid-area: c24;
+      }
+
+      .c25 {
+        grid-area: c25;
+      }
+
+      .c26 {
+        grid-area: c26;
+      }
+
+      .c27 {
+        grid-area: c27;
+      }
+
+      .c28 {
+        grid-area: c28;
+      }
+
+      .c29 {
+        grid-area: c29;
+      }
+
+      .c30 {
+        grid-area: c30;
+      }
+
+      .celula {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        grid-template-rows: 0.4fr 2fr 0.6fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". title seta-pro-lado"
+          ". imagem seta-pro-lado"
+          ". seta-pra-baixo seta-pro-lado";
+      }
+
+      .seta-pro-lado {
+        grid-area: seta-pro-lado;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .title {
+        grid-area: title;
+      }
+
+      .imagem {
+        grid-area: imagem;
+      }
+
+      .seta-pra-baixo {
+        grid-area: seta-pra-baixo;
+      }
+
+      .figura {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        filter: invert(100%);
+
+      }
+
+
+      h1 {
+        font-family: 'Courier New', Courier, monospace;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      h3{
+          font-family: 'Courier New', Courier, monospace;
+          color: black;
+          font-size: 160px;
+          text-align: center;
+      }
+
+      .seta_lado {
+        vertical-align: middle;
+        filter: invert(100%);
+
+      }
+
+
+      @media print {
+        html, body, .page {
+          height: 100%;
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          /* top: 25%; */
+          margin-top: auto;
+          margin-bottom: auto;
+          
+          width: 100%;
+          height: 1px;
+          overflow: visible
+        }
+      }
+
+
+
+      </style>
+
+		<title> Treino </title>
+		<link rel="shortcut icon" type="image/jpg" href="./Images/favicon.svg"/>				
+	</head>
+
+    <body>
+      <h3>Workout Routine</h3>
+
+        <div class="container">
+            <div class="at"> 
+                <div class="celula">
+                    <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                    <div class="title"><h1>Part I - Warm Up</h1></div>
+                    <div class="imagem"><img src="./Images/title.svg" class="figura"></div>
+                    <div class="seta-pra-baixo"></div>
+                  </div>
+            </div>
+            <div class="a1">
+                <div class="celula">
+                    <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                    <div class="title"><h1>A1 - Jump the Rope</h1></div>
+                    <div class="imagem"><img src="./Images/1_warmup/A1.svg" class="figura"></div>
+                    <div class="seta-pra-baixo"></div>
+                  </div>
+            </div>
+            <div class="a2">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A2 - Shoulder Rotations</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A2.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a3">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A3 - Arm Raises</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A3.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a4">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A4 - Torso Rotations</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A4.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a5">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A5 - Chest Expansions</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A5.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a6">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A6 - Neck Rotations</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A6.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a7">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A7 - Hip Rotations - Left</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A7-8.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a8">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A8 - Hip Rotations - Right</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A7-8.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a9">
+              <div class="celula">
+                <div class="seta-pro-lado"></div>
+                <div class="title"><h1>A9 - Reverse Hip Rotations - Left</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A9-10.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="winhoff">
+              <div class="celula">
+                <div class="seta-pro-lado"></div>
+                <div class="title"><h1>Wim Hof Breathing Method</h1></div>
+                <div class="imagem"><img src="./Images/win_hoff.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>  
+            </div>
+          </div>
+            <div class="a10">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A10 - Reverse Hip Rotations - Right</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A9-10.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a11">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A11 - Front Leg Raises - Left</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A11-12.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="a12">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>A12 Front Leg Raises - Right</h1></div>
+                <div class="imagem"><img src="./Images/1_warmup/A11-12.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="bt">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>Part II - Calisthenics</h1></div>
+                <div class="imagem"><img src="./Images/title.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b1">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B1 - Squats </h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B1.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b2">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B02 - Pull Ups</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B2.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b3">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B03 - Handstand Push Ups</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B3.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b4">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B04 - Leg Raises</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B4.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b5">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B05 Push Ups - Finger Hold</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B5.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b6">
+              <div class="celula">
+                <div class="seta-pro-lado"></div>
+                <div class="title"><h1>B06 - Push Ups - Closed Fist</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B6.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b7">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B07 - Push Ups - Diamont</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B7.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b8">
+                <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B08 - Chin Ups</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B8.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+                            </div>
+            </div>
+            <div class="b9">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B09 - Dips</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B9.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b10">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B10 - Pelvis Elevation</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B10.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b11">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B11 - Horizontal Plank</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B11.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b12">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B12 - Left-Sided Plank</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B12 - B13.svg" class="figura" ></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="b13">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>B13 - Right-Sided Plank</h1></div>
+                <div class="imagem"><img src="./Images/2_chalistenics/B12 - B13.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="ct">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>Part III - Streching</h1></div>
+                <div class="imagem"><img src="./Images/title.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c1">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C1 - Neck Benders</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C01.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c2">
+              <div class="celula">
+                <div class="seta-pro-lado"></div>
+                <div class="title"><h1>C2 - Neck Rotators</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C02.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c3">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C3 - Arms Biceps</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C03.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c4">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C4 - Arms Triceps</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C04.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c5">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C5 - Arms Wrist Flexors - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C05-6.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c6">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C6 - Arms Wrist Flexors - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C05-6.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c7">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C7 - Neck Trapezius - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C07-8.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c8">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C8 - Neck Trapezius - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C07-8.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c9">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C9 - Shouders Deltoid/Rhomboids - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C09-10.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c10">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C10 - Shouders Deltoid/Rhomboids - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C09-10.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c11">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C11 - Core Olique/Intercostals - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C11-12.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c12">
+              <div class="celula">
+                <div class="seta-pro-lado"></div>
+                <div class="title"><h1>C12 - Core Olique/Intercostals - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C11-12.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c13">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C13 - Chest Pecs</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C13.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c22">
+              <div class="celula">
+                <div class="seta-pro-lado"></div>
+                <div class="title"><h1>22 - Back Lumbar Extensors - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C22-23.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c14">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C14 - Legs Calves - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C14-15.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c15">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C15 - Legs Calves - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C14-15.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c16">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C16 - Legs Achilles/Soleus - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C16-17.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c17">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C17 - Legs Achilles/Soleus - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C16-17.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c18">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C18 - Hip Abductors - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C18-19.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c19">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C19 - Hip Abductors - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C18-19.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c20">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C20 Legs Quadriceps - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C20-21.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c21">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C21 - Legs Quadriceps - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C20-21.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c23">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C23 - Back Lumbar Extensors - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C22-23.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c31">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C31 - Neck on Wall</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C31.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c24">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C24 - Legs Hamstrings</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C24.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c25">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C25 - Hip Internal Rotators - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C25-26.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c26">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C25 - Hip Internal Rotators - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C25-26.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c27">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C27 - Legs Groin</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C25-26.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c28">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>C28 - Legs Adductors/Groin</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C28.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c29">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>29 - Hip External Rotators - Left</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C29-30.svg" class="figura" style="transform: scaleX(-1);"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+            <div class="c30">
+              <div class="celula">
+                <div class="seta-pro-lado"><img src="./Images/seta2.svg" class="seta_lado"></div>
+                <div class="title"><h1>29 - Hip External Rotators - Right</h1></div>
+                <div class="imagem"><img src="./Images/3_stretching/C29-30.svg" class="figura"></div>
+                <div class="seta-pra-baixo"></div>
+              </div>
+            </div>
+          </div>
+
+    </body>
+    <!-- style="transform: scaleX(-1);" -->

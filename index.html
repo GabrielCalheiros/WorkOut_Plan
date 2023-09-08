@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- Head 	-->
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+        .feed_img {
+            max-width: 7em;
+            max-height: 7em;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            outline: none;
+        }
+        
+        /* Texto */
+        h1 {
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            transition: 0.5s;
+        }
+        
+        h2 {
+            font-size: 40px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        h3 {
+            color: white;
+            text-align: left;
+        }
+
+        h4 {
+            color: white;
+            text-align: left;
+            font-size: medium;
+            font-weight: normal;
+        }
+        
+        p {
+            color: white;
+            text-align: justify;
+            font-size: smaller;
+            text-decoration: solid;
+            text-align-last: left;
+            text-indent: 10%;
+        }
+
+        ul {
+            color: white;
+            text-align: left;
+            font-size: smaller;
+            text-decoration: solid;
+            text-align-last: left;
+            list-style-type: circle;
+        }
+        body {
+            background-color: black;
+            /* Cor de Fundo */
+            max-width: 800px;
+            /* Largura do Corpo */
+            margin: auto;
+            font-family: 'Times New Roman';
+            overflow-x: hidden;
+        }
+		a:hover {
+			color: goldenrod;
+		}
+
+		li:hover {
+			color: goldenrod;
+		}
+		
+		.fourCollums {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			gap: 0% 0%;
+			grid-auto-flow: row;
+			grid-template-areas:
+				"one two three four";
+		}
+
+		.one {
+			grid-area: one;
+		}
+
+		.two {
+			grid-area: two;
+		}
+
+		.three {
+			grid-area: three;
+		}
+
+		.four {
+			grid-area: four;
+		}
+
+        
+        .feed_card {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 5% 90% 5%;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            ". ."
+            "feed_image feed_text"
+            ". .";
+            width: 100%;
+            height: 30%;
+            transition: 0.5s;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feed_card:hover {
+            transform: scale(1.08);
+        }
+        
+        .feed_image {
+            grid-area: feed_image;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        
+        .feed_text {
+            grid-area: feed_text;
+            align-self: center;
+        }
+        
+        .feed_img {
+            max-width: 7em;
+            max-height: 7em;
+        }
+        
+        .feed_card_virada {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 5% 90% 5%;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            ". ."
+            "feed_text_virada feed_image_virado"
+            ". .";
+            width: 100%;
+            height: 30%;
+            transition: 0.5s;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feed_card_virada:hover {
+            transform: scale(1.08);
+        }
+        
+        .feed_text_virada {
+            grid-area: feed_text_virada;
+            align-self: center;
+        }
+        
+        .feed_image_virado {
+            grid-area: feed_image_virado;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+        
+        }
+	</style>
+	<title> Treino </title>
+	<link rel="shortcut icon" type="image/jpg" href="./Images/favicon.svg" />
+	<h2>Treino </h2>
+    <hr>
+	<br>
+</head>
+
+<body>
+	<!-- Body 	-->
+
+	<p>
+		This workout routine is a combination of cardio and strength training exercises. The first part of
+		the routine focuses on jump rope or jumping jacks for 10 minutes to warm up, followed by a series of rotations
+		and expansions for various body parts including the shoulders, arms, torso, neck, and hips.
+	</p>
+
+	<p>
+		The workout section includes exercises for various muscle groups, such as squats, pull ups, handstand push ups,
+		leg raises, push ups, chin ups, dips, and planks. These exercises will help to build strength and improve
+		overall fitness.
+	</p>
+
+	<p>
+		The stretching portion of the routine includes a variety of stretches for the neck, arms, shoulders, core,
+		chest, legs, and back. These stretches will help to increase flexibility, reduce muscle soreness, and improve
+		range of motion. It's important to stretch after each workout to help prevent injury and improve recovery.
+	</p>
+
+	<p>
+		Overall, this workout routine provides a well-rounded fitness program that can help to improve your overall
+		health and fitness levels. However, it's always important to check with a doctor before starting a new exercise
+		routine, especially if you have any pre-existing medical conditions.
+	</p>
+
+	<p>
+		There are some audios bellow to download so you can do the entire routine with a robotic voice that sets the pace of the
+		exercise.
+		At the end, i have puted the Win Hof Breathing exercise, narrated by the man himself. The only diference
+		between
+		this audios are the soundtrack.
+	</p>
+
+
+	<div class="fourCollums">
+		<div class="one">
+			<h3>Fontes:</h3>
+			<ul>
+				<li><a href="http://www.startbodyweight.com/p/simple-dynamic-warm-up.html" target="_blank">WarmUp</a>
+				</li>
+				<li><a href="http://www.startbodyweight.com/p/start-bodyweight-basic-routine.html"
+						target="_blank">Calisthenics</a></li>
+				<li><a href="./PDFs/fff.pdf" target="_blank">Streaching</a>
+				</li>
+
+			</ul>
+		</div>
+		<div class="two">
+			<h3>Download Audios:</h3>
+
+			<ul>
+				<a href="https://drive.google.com/file/d/1niWNGbsreQEL5SFPnMKIS63ezFeNfHpW/view?usp=share_link">
+					<li>Hyperborean Warrior Edition</li>
+				</a>
+				<a href="https://drive.google.com/file/d/1kGN1if2L4M82Jobep3ZVw3xAe0yaxeGd/view?usp=share_link">
+					<li>San Andreas Gangsta Edition</li>
+				</a>
+
+				<a href="">
+					<li>Robot Voices Only</li>
+				</a>
+			</ul>
+		</div>
+		<div class="three">
+			<h3>Poster:</h3>
+			<ul>
+				<li><a href="./poster.html" target="_blank">HTML</a></li>
+				<li><a href="./PDFs/TreinoA1.pdf" target="_blank">PDF (A1)</a></li>
+				<li><a href="./PDFs/TreinoA2.pdf" target="_blank">PDF (A2)</a></li>
+
+
+			</ul>
+		</div>
+		<div class="four">
+			<h3>Parts:</h3>
+			<ul>
+				<a href="#WarmUp">
+					<li>A - WarmUp</li>
+				</a>
+				<a href="#workout">
+					<li>B - Calisthenics</li>
+				</a>
+				<a href="#Streching">
+					<li>C - Streaching</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="warm_up">
+		<h1 id="WarmUp">WarmUp</h1>
+
+		<!--  ------------------------------------------------------------- -->
+		<div class="feed_card">
+			<!-- 	A01	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A1.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A01 Jump the Rope </h3>
+				<p style="text-indent:0%;"> <strong> 10min </strong> <br> Skip the rope or jumping jack for 10 minutes.
+				</p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A02	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A2.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A02 Shoulder Rotations </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Ten Shoulder rotations. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A03	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A3.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A03 Arm Raises </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Ten Arm Raises. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A04	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A4.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A04 Torso Rotations </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Ten Torso Rotations. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A05	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A5.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A05 Chest Expansions </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Ten Chest expansions, with palms facing upwards.
+				</p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A06	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A6.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A06 Neck Rotations </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Rotate your neck slowly. Each rotation should
+					take at least four seconds. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A07	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A7-8.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A07 Hip Rotations - Left </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Standing in a staggered stance, bring your back
+					knee up in front of you, then to the side, before lowering your leg back down in the starting
+					position. Left leg first. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A08	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A7-8.svg" style="transform: scaleX(-1);"
+					class="feed_img"></div>
+			<div class="feed_text">
+				<h3> A08 Hip Rotations - Right </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Now the right leg. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A09	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A9-10.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A09 Reverse Hip Rotations - Left </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Reverse the previous motion by first bringing
+					your back knee up to your side, then rotating your upper leg until your knee is in front of you
+					before bringing it back down to the starting position. Left le </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A10	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A9-10.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> A10 Reverse Hip Rotations - Right </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Right leg now. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A11	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C01.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> A11 Front Leg Raises - Left </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Bring your leg up to your outstretched hand.
+					Left leg first. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	A12	-->
+			<div class="feed_image"><img src="./Images/1_warmup/A11-12.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> A12 Front Leg Raises - Right </h3>
+				<p style="text-indent:0%;"> <strong> 10x </strong> <br> Right leg now. </p>
+			</div>
+		</div><br>
+		<h1 id="workout"> Workout </h1>
+		<div class="feed_card">
+			<!-- 	B01	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B1.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B01 Squat </h3>
+				<p style="text-indent:0%;"> <strong> 30x 3_reps </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B02	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B2.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B02 Pull Ups </h3>
+				<p style="text-indent:0%;"> <strong> 8x 3_reps </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B03	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B3.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B03 Handstand Push Ups </h3>
+				<p style="text-indent:0%;"> <strong> 8x 3_reps </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B04	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B4.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B04 Leg Raises </h3>
+				<p style="text-indent:0%;"> <strong> 8x 3_reps </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B05	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B5.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B05 Push Ups - Finger Hold </h3>
+				<p style="text-indent:0%;"> <strong> 8x </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B06	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B6.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B06 Push Ups - Closed Fist </h3>
+				<p style="text-indent:0%;"> <strong> 8x </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B07	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B7.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B07 Push Ups - Diamont </h3>
+				<p style="text-indent:0%;"> <strong> 8x </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B08	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B8.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B08 Chin Ups </h3>
+				<p style="text-indent:0%;"> <strong> 8x 3_reps </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B09	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B9.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B09 Dips </h3>
+				<p style="text-indent:0%;"> <strong> 8x 3_reps </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B10	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B10.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B10 Pelvis Elevation </h3>
+				<p style="text-indent:0%;"> <strong> 8x 3_reps </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B11	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B11.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B11 Horizontal Plank </h3>
+				<p style="text-indent:0%;"> <strong> 60 seconds </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B12	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B12 - B13.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> B12 Left-Sided Plank </h3>
+				<p style="text-indent:0%;"> <strong> 60 seconds </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	B13	-->
+			<div class="feed_image"><img src="./Images/2_chalistenics/B12 - B13.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> B13 Right-Sided Plank </h3>
+				<p style="text-indent:0%;"> <strong> 60 seconds </strong> <br> Description Not Needed </p>
+			</div>
+		</div><br>
+		<h1 id="Streching"> Streching </h1>
+		<div class="feed_card">
+			<!-- 	C01	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C01.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C01 Neck Benders </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Tilt head to the side toward one shoulder. Do
+					with the other side as well. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C02	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C02.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C02 Neck Rotators </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Turn head slowly to look over one shoulder. Do
+					with both sides. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C03	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C03.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C03 Arms Biceps </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> With arms straight and fingers interlaced behind
+					back, raise hands toward ceiling. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C04	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C04.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C04 Arms Triceps </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Bend elbow and place hand of bent armon back of
+					neck. Using the other hand, pull elbow behind head. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C05	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C05-6.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C05 Arms Wrist Flexors - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Stretch arm out in front with elbow straight and
+					palm facing away. With other hand, pull fingers backward. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C06	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C05-6.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C06 Arms Wrist Flexors - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Right Side Now </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C07	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C07-8.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C07 Neck Trapezius - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Tilt head to left side. With arms behind back,
+					use left hand to pull right arm over and down to the left. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C08	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C07-8.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C08 Neck Trapezius - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Right Side Now </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C09	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C09-10.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C09 Shouders Deltoid/Rhomboids - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Pull right arm across chest with left hand.Turn
+					head away from pull. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C10	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C09-10.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C10 Shouders Deltoid/Rhomboids - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Left arm now. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C11	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C11-12.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C11 Core Olique/Intercostals - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Stand erect with hands overhead and palms
+					together. Bend the body to the righ side. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C12	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C11-12.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C12 Core Olique/Intercostals - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Left Side now </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C13	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C13.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C13 Chest Pecs </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Grab both sides of doorway one inch below
+					shoulder height. Lean forward until stretch is felt in chest. Keep back straight and feet shoulder
+					width apart. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C14	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C14-15.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C14 Legs Calves - Rights </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Place hands on wall and stagger feet two to
+					three feet apart. Keep right leg straight with heel on floor. Lean into the wall with left feet
+					close to the wall until stretch is felt in calf. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C15	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C14-15.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C15 Legs Calves - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Left leg now. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C16	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C16-17.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C16 Legs Achilles/Soleus - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Place hands on wall and stagger feet one to two
+					feet apart. Keep back right leg slightly bent with heel on floor. Lean into wall until a stretch is
+					felt in achilles. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C17	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C16-17.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C17 Legs Achilles/Soleus - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Left leg now. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C18	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C18-19.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C18 Hip Abductors - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Cross right leg behind the left. Lean right hip
+					toward wall while bending left knee. Keep right knee straight. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C19	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C18-19.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C19 Hip Abductors - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Repeat with left leg behind right. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C20	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C20-21.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C20 Legs Quadriceps - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Lie on side with knees bent and hold top foot
+					with same-side hand. Pull heel in toward buttock, keeping knees in line and hip pressed forward.
+					Right side first. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C21	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C20-21.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C21 Legs Quadriceps - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Left Side now </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C22	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C22-23.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C22 Back Lumbar Extensors - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Grasp hands underneath knee joint of right leg
+					and bring knee to chest. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C23	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C22-23.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C23 Back Lumbar Extensors - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Repeat with other leg. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C24	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C24.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C24 Legs Hamstrings </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> With head raised up and lower back slightly
+					arched, tuck chin to chest and round back toward ceiling. Return to starting position. Hold the
+					arched and round back positions briefly. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C25	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C25-26.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C25 Hip Internal Rotators - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Lie on back and gently pull right foot and knee
+					toward right shoulder. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C26	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C25-26.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C26 Hip Internal Rotators - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Left side now. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C27	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C27.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C27 Legs Groin </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Place soles of feet flat together. Gently lean
+					forward and push down on knees with forearms. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C28	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C28.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C28 Legs Adductors/Groin </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> With legs apart, knees straight and back
+					straight slide hands forward. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C29	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C29-30.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C29 Hip External Rotators - Left </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Place left leg over right and bring right arm to
+					the outside of left leg. Press left leg across body with right elbow. Turn head and look over left
+					shoulder. </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C30	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C29-30.svg" class="feed_img"></div>
+			<div class="feed_text">
+				<h3> C30 Hip External Rotators - Right </h3>
+				<p style="text-indent:0%;"> <strong> 30s </strong> <br> Right Side Now </p>
+			</div>
+		</div><br>
+		<div class="feed_card">
+			<!-- 	C31	-->
+			<div class="feed_image"><img src="./Images/3_stretching/C31.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> C31 Neck on Wall </h3>
+				<p style="text-indent:0%;"> <strong> 1m </strong> <br> </p>
+			</div>
+		</div><br>
+
+		<div class="feed_card">
+			<!-- 	C31	-->
+			<div class="feed_image"><img src="./Images/win_hoff.svg" class="feed_img"
+					style="transform: scaleX(-1);"></div>
+			<div class="feed_text">
+				<h3> Breathing Exercise </h3>
+				<p style="text-indent:0%;"> <strong> + or less 11m </strong> <br>
+					The Wim Hof Method is a breathing exercise technique developed by Dutch extreme athlete Wim Hof. It
+					is a combination of breathing techniques, cold exposure therapy, and mindfulness meditation, aimed
+					at increasing one's physical and mental resilience, as well as their overall well-being. The
+					breathing exercises are meant to stimulate the autonomic nervous system, improve circulation and
+					boost energy levels. The practice involves controlled breathing, where one inhales deeply and
+					exhales fully, repeating the process several times in quick succession. Here's a step-by-step guide
+					to performing the Wim Hof Breathing Exercise:
+
+				<ul>
+					<li>Find a quiet, comfortable place where you can sit down undisturbed for about 10-15 minutes.</li>
+					<li>Take off any tight clothing and remove any distractions (phone, music, etc.)</li>
+					<li>Start by taking 30 deep breaths in quick succession, inhaling deeply through your nose and
+						exhaling fully through your mouth.</li>
+					<li>After the 30 breaths, hold your breath for as long as you can (or until you start to feel
+						uncomfortable)</li>
+					<li>Exhale fully and take a deep breath, then exhale again, allowing your body to empty of air.</li>
+					<li>Hold your breath for another 15 seconds.</li>
+					<li>Inhale deeply, filling your lungs to capacity, then exhale fully and repeat this step three
+						times.</li>
+					<li>Finish the exercise by taking deep breaths and letting your body relax.</li>
+					<li>Repeat this entire process three times, and you'll have completed one Wim Hof Breathing Exercise
+						session.</li>
+
+					<li>Sources:
+						<ul>
+
+							<li><a href="https://www.youtube.com/watch?v=EWHRumILOOk">(Youtube) What I've Learned -
+									Control your Breath, Control your Body (Wim Hof Explained) </a></li>
+							<li><a href="https://www.youtube.com/watch?v=OpTG02x6w5o&t=283s">(Youtube) What I've Learned
+									- Ice Man Breathing: What to Know when doing The Wim Hof Method</a></li>
+							<li><a href="https://www.wimhofmethod.com/breathing-exercises">Official Site</a></li>
+
+
+						</ul>
+
+					</li>
+				</ul>
+				</p>
+			</div>
+		</div><br>
+
+
+
+
+	</div>
+
+
+
+	<br>
+	<br>
+
+
+
+
+	<!-- --------------------------------------------------- 	-->
+
+</body>
+<footer>
+	<!-- Rodapé 	-->
+
+</footer>
+
+</html>
