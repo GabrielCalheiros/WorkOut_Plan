@@ -1,12 +1,11 @@
 // Reference to the main containers where sections will be added
 const warmupContainer = document.querySelector('.swipe-view');
-const workoutContainer = document.querySelector('.workout-view');
-const stretchingContainer = document.querySelector('.stretching-view');
+const workoutContainer = document.querySelector('.swipe-view');
+const stretchingContainer = document.querySelector('.swipe-view');
 
 // Function to render sections based on a list and container
 function renderExercises(list, container) {
     list.forEach(exercise => {
-        
         // Create the section container
         const section = document.createElement('section');
         section.classList.add('dark_section');
