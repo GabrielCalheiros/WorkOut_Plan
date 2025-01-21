@@ -52,9 +52,11 @@ section {
     display:flex;
     -webkit-overflow-scrolling: touch;
     section {
-      width: 380px;
-      height: 100%;
-      flex:0 0 380px;
+      /* width: 380px;
+      height: 100%; */
+      flex:0 0 380px; 
+      width: 100vw;
+      height: 100vh;
       scroll-snap-align: start;
     }
   }
@@ -90,6 +92,7 @@ section {
 /* --------------------------------------------------------------------- */
 
 .container {  
+  width: 100vw;
   height: -webkit-fill-available;
     display: grid;
     grid-template-columns: 1fr;
