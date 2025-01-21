@@ -71,3 +71,5 @@ function renderExercises(list, container) {
 renderExercises(warmup, warmupContainer);
 renderExercises(workout, workoutContainer);
 renderExercises(stretching, stretchingContainer);
+
+
