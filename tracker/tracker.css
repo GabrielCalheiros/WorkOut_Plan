@@ -6,7 +6,7 @@
 }
 
 h3 {
-  font-size: x-large;
+  font-size: xxx-large;
   color: white;
   text-align: center;
   margin-top: 20vh;
@@ -28,7 +28,7 @@ h3 {
 }
 
 p {
-  font-size: medium;
+  font-size: xxx-large;
   color: white;
   text-align: center;
   margin-top: 5vh;
@@ -54,9 +54,9 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: xxx-large;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 4px;
-  padding: 10px;
+  border-radius: px;
+  padding: 20px;
 }
