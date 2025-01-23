@@ -53,6 +53,7 @@ ul {
     text-align-last: left;
     list-style-type: circle;
     -webkit-column-break-inside: avoid;
+    break-inside: avoid;
 }
 
 body {
