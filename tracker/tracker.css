@@ -4,3 +4,59 @@
   box-sizing: border-box;
   background-color: black;
 }
+
+h3 {
+  font-size: x-large;
+  color: white;
+  text-align: center;
+  margin-top: 20vh;
+  background: transparent;
+  width: 70vw;
+  margin-left: 15vw;
+
+  /* Force single line with ellipsis */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Show ellipsis for truncated text */
+}
+
+.card_image {
+  background: transparent;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-top: 5vh;
+}
+
+p {
+  font-size: medium;
+  color: white;
+  text-align: center;
+  margin-top: 5vh;
+  background: transparent;
+  width: 70vw;
+  margin-left: 15vw;
+}
+
+.button_row {
+  background: transparent;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  background: transparent;
+  border: solid;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px;
+}

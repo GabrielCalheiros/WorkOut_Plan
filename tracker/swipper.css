@@ -14,7 +14,11 @@
       flex:0 0 100%;
       scroll-snap-align: start;
     }
-  }
+}
+
+strong {
+    background: transparent;
+}
   
 .mobile {
     width: 100%;
@@ -27,7 +31,7 @@
     flex-direction: column;
 }
   
-.streching_card {
+.stretching_card {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(6,18,6,1) 25%, rgba(12,28,11,1) 50%, rgba(13,39,16,1) 75%, rgba(11,49,18,1) 100%);
 }

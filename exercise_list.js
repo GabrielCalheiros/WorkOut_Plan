@@ -345,7 +345,7 @@ let stretching = [
         id: "C31",
         title: "Breathing Exercise",
         image: "./Images/win_hoff.svg",
-        description: "The Wim Hof Method is a breathing exercise technique developed by Dutch extreme athlete Wim Hof. It is a combination of breathing techniques, cold exposure therapy, and mindfulness meditation, aimed at increasing one's physical and mental resilience, as well as their overall well-being. The breathing exercises are meant to stimulate the autonomic nervous system, improve circulation and boost energy levels. The practice involves controlled breathing, where one inhales deeply and exhales fully, repeating the process several times in quick succession. Here's a step-by-step guide to performing the Wim Hof Breathing Exercise:"
+        description: "The method stimulates the nervous system, improves circulation, and increases energy. It involves deep, controlled breaths followed by full exhales, repeated several times."
     }
 
 ];
