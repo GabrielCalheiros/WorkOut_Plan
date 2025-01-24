@@ -10,8 +10,6 @@
 
 	<!-- Import CSS -->
 	<link rel="stylesheet" href="./tracker.css">
-	<link rel="stylesheet" href="./swipper.css">
-    <link rel="stylesheet" href="./nav_bar.css">
 
 	<!-- Importing Exercises -->
 	<script src="../exercise_list.js"></script>
@@ -27,29 +25,20 @@
             <section class="title_card" id="title_card">
                 <h3>Legionary Routine</h3>
                 <img src="../Images/title.svg" alt="Jump the Rope" class="card_image">
-                <!-- <div class="button_row">
-                    <button onclick="concluir('A1')">Concluir</button>
-                    <button onclick="desistir('A1')">Desistir</button>
-                </div> -->
                 <p>Complete all the quests untill the end of the day. Swipe to the next section to continue. This quests are divided in 4 sections: WarmUp, Workout, Stretching and Post-Workout. You will notice the diferent sections by the colors they have.</p>
-                            
-                <link rel="stylesheet" href="./progress_bar.css">
-                
-            
-            
-            
+                                        
             </section>
 
-            <section class="title_card" id="title_card" style="display: none;">
-                <h3>Finished for Today!</h3>
-                <img src="../Images/title.svg" alt="Jump the Rope" class="card_image">
-                <p>Congratulations, you have completed all the quests for today. Now you can take a rest.</p>
+            <section class="title_card" id="congratulations_card" style="display: none;">
+                <h3 style="color: goldenrod;">Congratulations Legionary!</h3>
+                <img src="../Images/congratulations.svg" alt="Jump the Rope" class="card_image">
+                <p style="color: goldenrod;">You have completed all the quests for today. Now you can take a rest.</p>
             </section>
 
             <!-- Bottom Navigation Bar -->
             <nav class="bottom-nav">
                 <div class="container">
-                    <h4 style="color: goldenrod; margin: 0;" id="progressLabel">Progress: 0%</h4>
+                    <h4 style="border: none; margin: 0;" id="progressLabel">Progress: 0%</h4>
                     <h4 onclick="resetProgress()" style="margin: 0; cursor: pointer;">Reset Progress</h4>
                 </div>
             </nav>

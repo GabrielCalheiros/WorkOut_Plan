@@ -1,4 +1,4 @@
-// _____                                     ____                _____          _      
+//  _____                                     ____                _____          _      
 // |  __ \                                   |  _ \              / ____|        | |     
 // | |__) | __ ___   __ _ _ __ ___  ___ ___  | |_) | __ _ _ __  | |     ___   __| | ___ 
 // |  ___/ '__/ _ \ / _` | '__/ _ \/ __/ __| |  _ < / _` | '__| | |    / _ \ / _` |/ _ \
@@ -23,8 +23,10 @@ function calculateCompletionPercentage() {
     const completedCount = completedExercises.length;
     const percentageCompleted = (completedCount / totalExercises) * 100;
 
+    final_percentage = parseFloat(Math.min(Math.max(percentageCompleted, 0), 100).toFixed(2));
+
     // Return the percentage as a float with 2 decimal places between 0 and 100
-    return parseFloat(Math.min(Math.max(percentageCompleted, 0), 100).toFixed(2));
+    return final_percentage;
 }
 
 function updateProgress(percentage) {
@@ -34,6 +36,14 @@ function updateProgress(percentage) {
 
     // Update progress label
     progressLabel.textContent = `Progress: ${percentage}%`;
+
+    // If percentage is 100, show congratulations message
+    if (percentage === 100) {
+        const congratulationsMessage = document.getElementById("congratulations_card");
+        const title_card = document.getElementById("title_card");
+        congratulationsMessage.style.display = "block";
+        title_card.style.display = "none";
+    }
 
 }
 
@@ -48,7 +58,7 @@ function resetProgress() {
 
 }
 
-// ____            _        ______                _   _                   _ _ _         
+//  ____            _        ______                _   _                   _ _ _         
 // |  _ \          (_)      |  ____|              | | (_)                 | (_) |        
 // | |_) | __ _ ___ _  ___  | |__ _   _ _ __   ___| |_ _  ___  _ __   __ _| |_| |_ _   _ 
 // |  _ < / _` / __| |/ __| |  __| | | | '_ \ / __| __| |/ _ \| '_ \ / _` | | | __| | | |
@@ -56,6 +66,7 @@ function resetProgress() {
 // |____/ \__,_|___/_|\___| |_|   \__,_|_| |_|\___|\__|_|\___/|_| |_|\__,_|_|_|\__|\__, |
 //                                                                                  __/ |
 //                                                                                 |___/ 
+
 
 // Function to create and append sections for a given list of exercises
 function renderExerciseList(exerciseList, cardClass) {
@@ -77,7 +88,6 @@ function renderExerciseList(exerciseList, cardClass) {
                 <button onclick="concluir('${exercise.id}')">Concluir</button>
             </div>
             <p><strong>[${exercise.title}]</strong> - ${exercise.description}</p>
-
         `;
 
         // Append the section to the container
@@ -112,7 +122,6 @@ function removeCompletedExercises() {
 
 }
 
-
 // Function to mark an exercise as completed
 function concluir(id) {
     // Check if list_concluidos is saved in the URL
@@ -137,6 +146,15 @@ function concluir(id) {
 
 }
 
+//  _____       _ _   _       _    _____      _               
+// |_   _|     (_) | (_)     | |  / ____|    | |              
+//   | |  _ __  _| |_ _  __ _| | | (___   ___| |_ _   _ _ __  
+//   | | | '_ \| | __| |/ _` | |  \___ \ / _ \ __| | | | '_ \ 
+//  _| |_| | | | | |_| | (_| | |  ____) |  __/ |_| |_| | |_) |
+// |_____|_| |_|_|\__|_|\__,_|_| |_____/ \___|\__|\__,_| .__/ 
+//                                                     | |    
+//                                                     |_|    
+
 // Render each list into the swipe-view with the corresponding class
 renderExerciseList(warmup, "warmup_card");
 renderExerciseList(workout, "workout_card");
@@ -144,4 +162,3 @@ renderExerciseList(stretching, "stretching_card");
 
 // Remove the exercises already completed following the url
 removeCompletedExercises();
-
