@@ -157,7 +157,20 @@ let workout = [
         title: "Glute Kickback",
         image: "./Images/2_chalistenics/B14.svg",
         description: "8x 3_reps. Description Not Needed",
-    }
+    },
+    {
+        id: "B15",
+        title: "Hand Grip Training",
+        image: "./Images/2_chalistenics/B15.svg",
+        description: "3_reps until failure.",
+    },
+    {
+        id: "B16",
+        title: "Neck Bridge",
+        image: "./Images/2_chalistenics/B16.svg",
+        description: "3_reps until failure.",
+    },
+
 ];
 
 let stretching = [

@@ -1,0 +1,38 @@
+/* --------------------------------------------------------------------------------------------------------------------- */
+/*  _   _             _                 */
+/* | \ | |           | |                */
+/* |  \| | __ ___   _| |__   __ _ _ __  */
+/* | . ` |/ _` \ \ / / '_ \ / _` | '__| */
+/* | |\  | (_| |\ V /| |_) | (_| | |    */
+/* |_| \_|\__,_| \_/ |_.__/ \__,_|_|    */
+                                    
+                                    
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black; /* Dark background */
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above other content */
+    color: white;
+}
+
+/* Progress Container inside Bottom Nav */
+.bottom-nav .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Align items to the edges */
+    align-items: center; /* Center vertically */
+    background: transparent;
+}
+
+h4, label {
+    background: transparent;
+    border: solid;
+    padding: 5px;
+    border-radius: 5px;
+}

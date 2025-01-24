@@ -1,3 +1,10 @@
+/*  _______             _              */
+/* |__   __|           | |             */
+/*    | |_ __ __ _  ___| | _____ _ __  */
+/*    | | '__/ _` |/ __| |/ / _ \ '__| */
+/*    | | | | (_| | (__|   <  __/ |    */
+/*    |_|_|  \__,_|\___|_|\_\___|_|    */
+                                   
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +13,7 @@
 }
 
 h3 {
-  font-size: xxx-large;
+  font-size: large;
   color: white;
   text-align: center;
   margin-top: 10vh;
@@ -28,7 +35,7 @@ h3 {
 }
 
 p {
-  font-size: xxx-large;
+  font-size: medium;
   color: white;
   text-align: center;
   margin-top: 5vh;
@@ -44,19 +51,20 @@ p {
   margin-top: 5vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 button {
+  border-width: thick;
   background: transparent;
   border: solid;
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: xxx-large;
+  font-size: medium;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: px;
-  padding: 20px;
+  border-radius: 5px;
+  padding: 10px;
 }

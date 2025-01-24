@@ -45,3 +45,9 @@ strong {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(24,12,3,1) 25%, rgba(38,21,6,1) 50%, rgba(52,27,9,1) 75%, rgba(67,34,11,1) 100%);
 }
+
+.title_card {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 25%, rgba(28,28,28,1) 50%, rgba(38,38,38,1) 75%, rgba(49,49,49,1) 100%);
+}
+
