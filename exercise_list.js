@@ -373,7 +373,7 @@ let post_workout = [
         id: "D02",
         title: "Prayer",
         image: "./Images/4_postWorkout/D02.svg",
-        description: "The method stimulates the nervous system, improves circulation, and increases energy. It involves deep, controlled breaths followed by full exhales, repeated several times."
+        description: "[Description to be added]"
     }
 ]
 
