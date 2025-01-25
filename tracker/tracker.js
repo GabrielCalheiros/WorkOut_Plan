@@ -7,10 +7,7 @@
 //                   __/ |                                                              
 //                  |___/                                                               
 
-
 function calculateCompletionPercentage() {
-    // Get the total number of exercises from all categories
-    const totalExercises = [...warmup, ...workout, ...stretching].length;
 
     // Get the completed exercise IDs from the URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -124,26 +121,28 @@ function removeCompletedExercises() {
 
 // Function to mark an exercise as completed
 function concluir(id) {
-    // Check if list_concluidos is saved in the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('list_concluidos')) {
-        // Get the list_concluidos from the URL and convert it to an array
-        const list_concluidos = urlParams.get('list_concluidos').split(',').filter(Boolean); // Ensure no empty values
-        // Add the id to the list_concluidos
-        list_concluidos.push(id);
-        // Update the URL with the new list_concluidos
-        const newUrl = `${window.location.pathname}?list_concluidos=${list_concluidos.join(',')}`;
-        window.history.pushState({}, '', newUrl);
-    } else {
-        // If list_concluidos is not saved in the URL, create a new array with the id
-        const list_concluidos = [id];
-        // Update the URL with the new list_concluidos
-        const newUrl = `${window.location.pathname}?list_concluidos=${list_concluidos.join(',')}`;
-        window.history.pushState({}, '', newUrl);
-    }
+    // Add a 500ms delay before executing the rest of the function
+    setTimeout(() => {
+        // Check if list_concluidos is saved in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('list_concluidos')) {
+            // Get the list_concluidos from the URL and convert it to an array
+            const list_concluidos = urlParams.get('list_concluidos').split(',').filter(Boolean); // Ensure no empty values
+            // Add the id to the list_concluidos
+            list_concluidos.push(id);
+            // Update the URL with the new list_concluidos
+            const newUrl = `${window.location.pathname}?list_concluidos=${list_concluidos.join(',')}`;
+            window.history.pushState({}, '', newUrl);
+        } else {
+            // If list_concluidos is not saved in the URL, create a new array with the id
+            const list_concluidos = [id];
+            // Update the URL with the new list_concluidos
+            const newUrl = `${window.location.pathname}?list_concluidos=${list_concluidos.join(',')}`;
+            window.history.pushState({}, '', newUrl);
+        }
 
-    removeCompletedExercises();
-
+        removeCompletedExercises();
+    }, 300); // 300ms delay
 }
 
 //  _____       _ _   _       _    _____      _               
@@ -159,6 +158,7 @@ function concluir(id) {
 renderExerciseList(warmup, "warmup_card");
 renderExerciseList(workout, "workout_card");
 renderExerciseList(stretching, "stretching_card");
+renderExerciseList(post_workout, "postworkout_card");
 
 // Remove the exercises already completed following the url
 removeCompletedExercises();

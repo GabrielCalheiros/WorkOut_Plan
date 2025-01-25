@@ -356,9 +356,27 @@ let stretching = [
     },
     {
         id: "C31",
+        title: "Neck on Wall",
+        image: "./Images/3_stretching/C31.svg",
+        description: "For 1 minute, stretch your neck against the wall.",
+    }
+];
+
+let post_workout = [
+    {
+        id: "D01",
         title: "Breathing Exercise",
-        image: "./Images/win_hoff.svg",
+        image: "./Images/4_postWorkout/D01.svg",
+        description: "The method stimulates the nervous system, improves circulation, and increases energy. It involves deep, controlled breaths followed by full exhales, repeated several times."
+    },
+    {
+        id: "D02",
+        title: "Prayer",
+        image: "./Images/4_postWorkout/D02.svg",
         description: "The method stimulates the nervous system, improves circulation, and increases energy. It involves deep, controlled breaths followed by full exhales, repeated several times."
     }
+]
 
-];
+// Get the total number of exercises from all categories
+const totalExercises = [...warmup, ...workout, ...stretching, ...post_workout].length;
+
