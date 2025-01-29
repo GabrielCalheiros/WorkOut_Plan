@@ -162,3 +162,5 @@ renderExerciseList(post_workout, "postworkout_card");
 
 // Remove the exercises already completed following the url
 removeCompletedExercises();
+
+
