@@ -82,9 +82,27 @@ function renderExerciseList(exerciseList, cardClass) {
             <h3>${exercise.id} - ${exercise.title}</h3>
             <img src=".${exercise.image}" alt="${exercise.title}" class="card_image">
             <div class="button_row">
-                <button onclick="concluir('${exercise.id}')">Concluir</button>
+            <table>
+
+                <tr>
+                    <td>
+                        <button onclick="changePersonalRecord('${exercise.id}', -1)">-</button>
+                        <span id="pr_display_${exercise.id}" class="pr_display">0 </span><span class="pr_displayUnity">${exercise.unity}</span>
+                        <button onclick="changePersonalRecord('${exercise.id}', 1)">+</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span id="pr_display_${exercise.id}" class="pr_display"></span></td>
+                </tr>
+
+                <tr>
+                    <td><button style="width: 100%;" onclick="concluir('${exercise.id}')">Concluir</button></td>
+                </tr>
+
+            </table>   
+                
             </div>
-            <p><strong>[${exercise.title}]</strong> - ${exercise.description}</p>
         `;
 
         // Append the section to the container
@@ -145,6 +163,81 @@ function concluir(id) {
     }, 300); // 300ms delay
 }
 
+//   _  __                 _____                        _     
+//  | |/ /                |  __ \                      | |    
+//  | ' / ___  ___ _ __   | |__) |___  ___ ___  _ __ __| |___ 
+//  |  < / _ \/ _ \ '_ \  |  _  // _ \/ __/ _ \| '__/ _` / __|
+//  | . \  __/  __/ |_) | | | \ \  __/ (_| (_) | | | (_| \__ \
+//  |_|\_\___|\___| .__/  |_|  \_\___|\___\___/|_|  \__,_|___/
+//                | |                                         
+//                |_|                                         
+
+function changePersonalRecord(exerciseId, delta) {
+    const display = document.getElementById(`pr_display_${exerciseId}`);
+
+    // Get current value or set to 0
+    let current = parseInt(display.textContent.replace(/\D/g, ''), 10) || 0;
+
+    // Apply delta, ensuring it's at least 0
+    current = Math.max(current + delta, 0);
+
+    // Update display
+    display.textContent = current;
+
+    // Save to URL
+    savePersonalRecordToURL(exerciseId, current);
+}
+
+function savePersonalRecordToURL(exerciseId, value) {
+    const urlParams = new URLSearchParams(window.location.search);
+    let personalRecords = [];
+    if (urlParams.has('personal_records')) {
+        personalRecords = urlParams.get('personal_records').split(';').filter(Boolean);
+    }
+
+    // Remove existing record for this exercise if exists
+    personalRecords = personalRecords.filter(record => !record.startsWith(`${exerciseId}:`));
+
+    // Add the new record
+    personalRecords.push(`${exerciseId}:${value}`);
+
+    // Update the URL
+    urlParams.set('personal_records', personalRecords.join(';'));
+    window.history.replaceState({}, '', `${window.location.pathname}?${urlParams.toString()}`);
+}
+
+function loadPersonalRecords() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('personal_records')) {
+        const personalRecords = urlParams.get('personal_records').split(';').filter(Boolean);
+        personalRecords.forEach(record => {
+            const [exerciseId, value] = record.split(':');
+            const display = document.getElementById(`pr_display_${exerciseId}`);
+            if (display) display.textContent = value || "0";
+        });
+    }
+}
+
+function updatePersonalRecordDisplay(exerciseId, value) {
+    const display = document.getElementById(`pr_display_${exerciseId}`);
+    if (display) {
+        display.textContent = ` (Record: ${value})`;
+    }
+}
+
+function resetPersonalRecords() {
+    const url = new URL(window.location.href);
+    
+    // Remove the 'personal_records' parameter from the URL
+    url.searchParams.delete('personal_records');
+    
+    // Reload the page to reflect the reset
+    window.location.href = url.href;
+}
+
+
+
+
 //  _____       _ _   _       _    _____      _               
 // |_   _|     (_) | (_)     | |  / ____|    | |              
 //   | |  _ __  _| |_ _  __ _| | | (___   ___| |_ _   _ _ __  
@@ -163,4 +256,5 @@ renderExerciseList(post_workout, "postworkout_card");
 // Remove the exercises already completed following the url
 removeCompletedExercises();
 
-
+// Load personal records
+loadPersonalRecords();

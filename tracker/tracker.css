@@ -17,7 +17,7 @@ h3 {
   font-size: large;
   color: white;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 15vh;
   background: transparent;
   width: 70vw;
   margin-left: 15vw;
@@ -47,8 +47,7 @@ p {
 
 .button_row {
   background: transparent;
-  width: 50vw;
-  margin-left: 25vw;
+  width: 100vw;
   margin-top: 5vh;
   display: flex;
   flex-direction: row;
@@ -183,3 +182,32 @@ h4, label {
   border-radius: 7px;
 }
 
+/* 
+  _____                                _   _____                        _ 
+ |  __ \                              | | |  __ \                      | |
+ | |__) |__ _ __ ___  ___  _ __   __ _| | | |__) |___  ___ ___  _ __ __| |
+ |  ___/ _ \ '__/ __|/ _ \| '_ \ / _` | | |  _  // _ \/ __/ _ \| '__/ _` |
+ | |  |  __/ |  \__ \ (_) | | | | (_| | | | | \ \  __/ (_| (_) | | | (_| |
+ |_|   \___|_|  |___/\___/|_| |_|\__,_|_| |_|  \_\___|\___\___/|_|  \__,_|
+                                                                          
+*/
+
+
+table, tr, td, input, tbody{
+  background-color: transparent;
+  color: white;
+  margin: 0;
+}
+
+.pr_display{
+  background-color: transparent;
+  color: white;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.pr_displayUnity{
+  margin-right: 20px;
+  background-color: transparent;
+  color: white;
+}
