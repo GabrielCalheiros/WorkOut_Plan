@@ -1,89 +1,35 @@
-//  _____                                     ____                _____          _      
-// |  __ \                                   |  _ \              / ____|        | |     
-// | |__) | __ ___   __ _ _ __ ___  ___ ___  | |_) | __ _ _ __  | |     ___   __| | ___ 
-// |  ___/ '__/ _ \ / _` | '__/ _ \/ __/ __| |  _ < / _` | '__| | |    / _ \ / _` |/ _ \
-// | |   | | | (_) | (_| | | |  __/\__ \__ \ | |_) | (_| | |    | |___| (_) | (_| |  __/
-// |_|   |_|  \___/ \__, |_|  \___||___/___/ |____/ \__,_|_|     \_____\___/ \__,_|\___|
-//                   __/ |                                                              
-//                  |___/                                                               
-
 function calculateCompletionPercentage() {
-
-    // Get the completed exercise IDs from the URL
     const urlParams = new URLSearchParams(window.location.search);
     let completedExercises = [];
     if (urlParams.has('list_concluidos')) {
-        completedExercises = urlParams.get('list_concluidos').split(',').filter(Boolean); // Ensure no empty values
+        completedExercises = urlParams.get('list_concluidos').split(',').filter(Boolean);
     }
-
-    // Calculate the percentage of completed exercises
     const completedCount = completedExercises.length;
     const percentageCompleted = (completedCount / totalExercises) * 100;
-
-    final_percentage = parseFloat(Math.min(Math.max(percentageCompleted, 0), 100).toFixed(2));
-
-    // Return the percentage as a float with 2 decimal places between 0 and 100
-    return final_percentage;
+    return parseFloat(Math.min(Math.max(percentageCompleted, 0), 100).toFixed(2));
 }
 
 function updateProgress(percentage) {
-
-    // Get progress label
     const progressLabel = document.getElementById("progressLabel");
-
-    // Update progress label
     progressLabel.textContent = `Progress: ${percentage}%`;
 
-    // If percentage is 100, show congratulations message
     if (percentage === 100) {
-        const congratulationsMessage = document.getElementById("congratulations_card");
-        const title_card = document.getElementById("title_card");
-        congratulationsMessage.style.display = "block";
-        title_card.style.display = "none";
+        document.getElementById("congratulations_card").style.display = "block";
+        document.getElementById("title_card").style.display = "none";
     }
-
 }
 
-function resetProgress() {
-
-    // Remove the 'list_concluidos' parameter from the URL
-    const url = new URL(window.location.href);
-    url.searchParams.delete('list_concluidos');
-    
-    // Reload the page
-    window.location.href = url.href;
-
-}
-
-//  ____            _        ______                _   _                   _ _ _         
-// |  _ \          (_)      |  ____|              | | (_)                 | (_) |        
-// | |_) | __ _ ___ _  ___  | |__ _   _ _ __   ___| |_ _  ___  _ __   __ _| |_| |_ _   _ 
-// |  _ < / _` / __| |/ __| |  __| | | | '_ \ / __| __| |/ _ \| '_ \ / _` | | | __| | | |
-// | |_) | (_| \__ \ | (__  | |  | |_| | | | | (__| |_| | (_) | | | | (_| | | | |_| |_| |
-// |____/ \__,_|___/_|\___| |_|   \__,_|_| |_|\___|\__|_|\___/|_| |_|\__,_|_|_|\__|\__, |
-//                                                                                  __/ |
-//                                                                                 |___/ 
-
-
-// Function to create and append sections for a given list of exercises
 function renderExerciseList(exerciseList, cardClass) {
-    // Get the swipe-view container
     const container = document.querySelector(".swipe-view");
 
-    // Loop through each exercise in the list
     exerciseList.forEach((exercise) => {
-        // Create a new section element
         const section = document.createElement("section");
-        section.className = cardClass; // Set the class (e.g., warmup_card, workout_card, etc.)
-        section.id = exercise.id; // Set the id of the section
+        section.className = cardClass;
+        section.id = exercise.id;
 
-        // Add the inner content of the section
-        section.innerHTML = `
-            <h3>${exercise.id} - ${exercise.title}</h3>
-            <img src=".${exercise.image}" alt="${exercise.title}" class="card_image">
-            <div class="button_row">
-            <table>
-
+        let recordControls = "";
+        if (cardClass === "workout_card") {
+            recordControls = `
                 <tr>
                     <td>
                         <button onclick="changePersonalRecord('${exercise.id}', -1)">-</button>
@@ -91,100 +37,67 @@ function renderExerciseList(exerciseList, cardClass) {
                         <button onclick="changePersonalRecord('${exercise.id}', 1)">+</button>
                     </td>
                 </tr>
+            `;
+        }
 
-                <tr>
-                    <td><span id="pr_display_${exercise.id}" class="pr_display"></span></td>
-                </tr>
-
+        section.innerHTML = `
+            <h3>${exercise.id} - ${exercise.title}</h3>
+            <img src=".${exercise.image}" alt="${exercise.title}" class="card_image">
+            <div class="button_row">
+            <table>
+                ${recordControls}
                 <tr>
                     <td><button style="width: 100%;" onclick="concluir('${exercise.id}')">Concluir</button></td>
                 </tr>
-
             </table>   
-                
             </div>
         `;
 
-        // Append the section to the container
         container.appendChild(section);
     });
 }
 
-// Function to remove completed exercises
+function resetProgress() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('list_concluidos');
+    window.location.href = url.href; // Reload page preserving other parameters
+}
+
 function removeCompletedExercises() {
-    // Get the URL parameters
     const urlParams = new URLSearchParams(window.location.search);
-    
-    // Check if 'list_concluidos' exists in the URL
+
     if (urlParams.has('list_concluidos')) {
-        // Get the completed exercise IDs as an array
         const list_concluidos = urlParams.get('list_concluidos').split(',').filter(Boolean);
-        
-        // Loop through the completed exercise IDs
         list_concluidos.forEach((exerciseId) => {
-            // Find the section with the corresponding ID
             const section = document.getElementById(exerciseId);
-            
-            // Remove the section if it exists
-            if (section) {
-                section.remove();
-            }
+            if (section) section.remove();
         });
     }
 
-    percentageCompleted = calculateCompletionPercentage();
+    const percentageCompleted = calculateCompletionPercentage();
     updateProgress(percentageCompleted);
-
 }
 
-// Function to mark an exercise as completed
 function concluir(id) {
-    // Add a 500ms delay before executing the rest of the function
     setTimeout(() => {
-        // Check if list_concluidos is saved in the URL
         const urlParams = new URLSearchParams(window.location.search);
+        let list_concluidos = [];
         if (urlParams.has('list_concluidos')) {
-            // Get the list_concluidos from the URL and convert it to an array
-            const list_concluidos = urlParams.get('list_concluidos').split(',').filter(Boolean); // Ensure no empty values
-            // Add the id to the list_concluidos
-            list_concluidos.push(id);
-            // Update the URL with the new list_concluidos
-            const newUrl = `${window.location.pathname}?list_concluidos=${list_concluidos.join(',')}`;
-            window.history.pushState({}, '', newUrl);
-        } else {
-            // If list_concluidos is not saved in the URL, create a new array with the id
-            const list_concluidos = [id];
-            // Update the URL with the new list_concluidos
-            const newUrl = `${window.location.pathname}?list_concluidos=${list_concluidos.join(',')}`;
-            window.history.pushState({}, '', newUrl);
+            list_concluidos = urlParams.get('list_concluidos').split(',').filter(Boolean);
         }
+        if (!list_concluidos.includes(id)) list_concluidos.push(id);
+        urlParams.set('list_concluidos', list_concluidos.join(','));
+        window.history.pushState({}, '', `${window.location.pathname}?${urlParams.toString()}`);
 
         removeCompletedExercises();
-    }, 300); // 300ms delay
+    }, 300);
 }
-
-//   _  __                 _____                        _     
-//  | |/ /                |  __ \                      | |    
-//  | ' / ___  ___ _ __   | |__) |___  ___ ___  _ __ __| |___ 
-//  |  < / _ \/ _ \ '_ \  |  _  // _ \/ __/ _ \| '__/ _` / __|
-//  | . \  __/  __/ |_) | | | \ \  __/ (_| (_) | | | (_| \__ \
-//  |_|\_\___|\___| .__/  |_|  \_\___|\___\___/|_|  \__,_|___/
-//                | |                                         
-//                |_|                                         
 
 function changePersonalRecord(exerciseId, delta) {
     const display = document.getElementById(`pr_display_${exerciseId}`);
-
-    // Get current value or set to 0
     let current = parseInt(display.textContent.replace(/\D/g, ''), 10) || 0;
-
-    // Apply delta, ensuring it's at least 0
     current = Math.max(current + delta, 0);
-
-    // Update display
     display.textContent = current;
-
-    // Save to URL
     savePersonalRecordToURL(exerciseId, current);
 }
 
@@ -195,13 +108,9 @@ function savePersonalRecordToURL(exerciseId, value) {
         personalRecords = urlParams.get('personal_records').split(';').filter(Boolean);
     }
 
-    // Remove existing record for this exercise if exists
     personalRecords = personalRecords.filter(record => !record.startsWith(`${exerciseId}:`));
-
-    // Add the new record
     personalRecords.push(`${exerciseId}:${value}`);
 
-    // Update the URL
     urlParams.set('personal_records', personalRecords.join(';'));
     window.history.replaceState({}, '', `${window.location.pathname}?${urlParams.toString()}`);
 }
@@ -218,43 +127,18 @@ function loadPersonalRecords() {
     }
 }
 
-function updatePersonalRecordDisplay(exerciseId, value) {
-    const display = document.getElementById(`pr_display_${exerciseId}`);
-    if (display) {
-        display.textContent = ` (Record: ${value})`;
-    }
-}
-
 function resetPersonalRecords() {
     const url = new URL(window.location.href);
-    
-    // Remove the 'personal_records' parameter from the URL
     url.searchParams.delete('personal_records');
-    
-    // Reload the page to reflect the reset
     window.location.href = url.href;
 }
 
-
-
-
-//  _____       _ _   _       _    _____      _               
-// |_   _|     (_) | (_)     | |  / ____|    | |              
-//   | |  _ __  _| |_ _  __ _| | | (___   ___| |_ _   _ _ __  
-//   | | | '_ \| | __| |/ _` | |  \___ \ / _ \ __| | | | '_ \ 
-//  _| |_| | | | | |_| | (_| | |  ____) |  __/ |_| |_| | |_) |
-// |_____|_| |_|_|\__|_|\__,_|_| |_____/ \___|\__|\__,_| .__/ 
-//                                                     | |    
-//                                                     |_|    
-
-// Render each list into the swipe-view with the corresponding class
+// Render lists
 renderExerciseList(warmup, "warmup_card");
 renderExerciseList(workout, "workout_card");
 renderExerciseList(stretching, "stretching_card");
 renderExerciseList(post_workout, "postworkout_card");
 
-// Remove the exercises already completed following the url
+// Remove completed and load records
 removeCompletedExercises();
-
-// Load personal records
 loadPersonalRecords();
