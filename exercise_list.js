@@ -1,10 +1,11 @@
-let warmup = [
+let exercise_list = [
     {
         id: "A1",
         title: "Jump the Rope",
         unity: " min",
         image: "./Images/1_warmup/A1.svg",
         description: "Jump the rope or jumping jack for 10 minutes.",
+        type: "warmup"
     },
     {
         id: "A2",
@@ -12,6 +13,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A2.svg",
         description: "Ten Shoulder rotations.",
+        type: "warmup"
     },
     {
         id: "A3",
@@ -19,6 +21,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A3.svg",
         description: "Ten Arm raises.",
+        type: "warmup"
     },
     {
         id: "A4",
@@ -26,6 +29,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A4.svg",
         description: "Ten Torso Rotations.",
+        type: "warmup"
     },
     {
         id: "A5",
@@ -33,6 +37,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A5.svg",
         description: "Ten Chest expansions, with palms facing upwards.",
+        type: "warmup"
     },
     {
         id: "A6",
@@ -40,6 +45,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A6.svg",
         description: "Rotate your neck slowly. Each rotation should take at least four seconds.",
+        type: "warmup"
     },
     {
         id: "A7",
@@ -47,6 +53,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A7.svg",
         description: "Ten Hip rotations to the left.",
+        type: "warmup"
     },
     {
         id: "A8",
@@ -54,6 +61,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A8.svg",
         description: "Ten Hip rotations to the right.",
+        type: "warmup"
     },
     {
         id: "A9",
@@ -61,6 +69,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A9.svg",
         description: "Ten Reverse Hip rotations to the left.",
+        type: "warmup"
     },
     {
         id: "A10",
@@ -68,6 +77,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A10.svg",
         description: "Ten Reverse Hip rotations to the right.",        
+        type: "warmup"
     },
     {
         id: "A11",
@@ -75,6 +85,7 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A11.svg",
         description: "Ten Front leg raises to the left.",
+        type: "warmup"
     },
     {
         id: "A12",
@@ -82,16 +93,15 @@ let warmup = [
         unity: " reps",
         image: "./Images/1_warmup/A12.svg",
         description: "Ten Front leg raises to the right.",
-    }
-];
-
-let workout = [
+        type: "warmup"
+    },
     {
         id: "B01",
         title: "Squat",
         unity: " reps",
         image: "./Images/2_chalistenics/B1.svg",
         description: "30x 3_reps. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B02",
@@ -99,6 +109,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B2.svg",
         description: "8x 3_reps. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B03",
@@ -106,6 +117,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B3.svg",
         description: "8x 3_reps. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B04",
@@ -113,6 +125,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B4.svg",
         description: "8x 3_reps. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B05",
@@ -120,6 +133,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B5.svg",
         description: "8x. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B06",
@@ -127,6 +141,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B6.svg",
         description: "8x. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B07",
@@ -134,6 +149,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B7.svg",
         description: "8x. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B08",
@@ -141,6 +157,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B8.svg",
         description: "8x 3_reps. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B09",
@@ -148,6 +165,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B9.svg",
         description: "8x 3_reps. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B10",
@@ -155,6 +173,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B10.svg",
         description: "8x 3_reps. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B11",
@@ -162,6 +181,7 @@ let workout = [
         unity: " segs",
         image: "./Images/2_chalistenics/B11.svg",
         description: "60 seconds. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B12",
@@ -169,6 +189,7 @@ let workout = [
         unity: " segs",
         image: "./Images/2_chalistenics/B12.svg",
         description: "60 seconds. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B13",
@@ -176,6 +197,7 @@ let workout = [
         unity: " segs",
         image: "./Images/2_chalistenics/B13.svg",
         description: "60 seconds. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B14",
@@ -183,6 +205,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B14.svg",
         description: "8x 3_reps. Description Not Needed",
+        type: "workout"
     },
     {
         id: "B15",
@@ -190,6 +213,7 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B15.svg",
         description: "3_reps until failure.",
+        type: "workout"
     },
     {
         id: "B16",
@@ -197,17 +221,15 @@ let workout = [
         unity: " reps",
         image: "./Images/2_chalistenics/B16.svg",
         description: "3_reps until failure.",
+        type: "workout"
     },
-
-];
-
-let stretching = [
     {
         id: "C01",
         title: "Neck Benders",
         unity: " segs",
         image: "./Images/3_stretching/C01.svg",
         description: "30s. Tilt head to the side toward one shoulder. Do with the other side as well.",
+        type: "stretching"
     },
     {
         id: "C02",
@@ -215,6 +237,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C02.svg",
         description: "30s. Turn head slowly to look over one shoulder. Do with both sides.",
+        type: "stretching"
     },
     {
         id: "C03",
@@ -222,6 +245,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C03.svg",
         description: "30s. With arms straight and fingers interlaced behind back, raise hands toward ceiling.",
+        type: "stretching"
     },
     {
         id: "C04",
@@ -229,6 +253,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C04.svg",
         description: "30s. Bend elbow and place hand of bent arm on back of neck. Using the other hand, pull elbow behind head.",
+        type: "stretching"
     },
     {
         id: "C05",
@@ -236,6 +261,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C05.svg",
         description: "30s. Stretch arm out in front with elbow straight and palm facing away. With other hand, pull fingers backward.",
+        type: "stretching"
     },
     {
         id: "C06",
@@ -243,6 +269,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C06.svg",
         description: "30s. Right Side Now.",
+        type: "stretching"
     },
     {
         id: "C07",
@@ -250,6 +277,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C07.svg",
         description: "30s. Tilt head to left side. With arms behind back, use left hand to pull right arm over and down to the left.",
+        type: "stretching"
     },
     {
         id: "C08",
@@ -257,6 +285,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C08.svg",
         description: "30s. Right Side Now.",
+        type: "stretching"
     },
     {
         id: "C09",
@@ -264,6 +293,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C09.svg",
         description: "30s. Pull right arm across chest with left hand. Turn head away from pull.",
+        type: "stretching"
     },
     {
         id: "C10",
@@ -271,6 +301,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C10.svg",
         description: "30s. Left arm now.",
+        type: "stretching"
     },
     {
         id: "C11",
@@ -278,6 +309,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C11.svg",
         description: "30s. Stand erect with hands overhead and palms together. Bend the body to the right side.",
+        type: "stretching"
     },
     {
         id: "C12",
@@ -285,6 +317,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C12.svg",
         description: "30s. Left Side now.",
+        type: "stretching"
     },
     {
         id: "C13",
@@ -292,6 +325,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C13.svg",
         description: "30s. Grab both sides of doorway one inch below shoulder height. Lean forward until stretch is felt in chest. Keep back straight and feet shoulder-width apart.",
+        type: "stretching"
     },
     {
         id: "C14",
@@ -299,6 +333,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C14.svg",
         description: "30s. Place hands on wall and stagger feet two to three feet apart. Keep right leg straight with heel on floor. Lean into the wall with left foot close to the wall until stretch is felt in calf.",
+        type: "stretching"
     },
     {
         id: "C15",
@@ -306,6 +341,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C15.svg",
         description: "30s. Left leg now.",
+        type: "stretching"
     },
     {
         id: "C16",
@@ -313,6 +349,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C16.svg",
         description: "30s. Place hands on wall and stagger feet one to two feet apart. Keep back right leg slightly bent with heel on floor. Lean into wall until a stretch is felt in Achilles.",
+        type: "stretching"
     },
     {
         id: "C17",
@@ -320,6 +357,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C17.svg",
         description: "30s. Left leg now.",
+        type: "stretching"
     },
     {
         id: "C18",
@@ -327,6 +365,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C18.svg",
         description: "30s. Cross right leg behind the left. Lean right hip toward wall while bending left knee. Keep right knee straight.",
+        type: "stretching"
     },
     {
         id: "C19",
@@ -334,6 +373,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C19.svg",
         description: "30s. Repeat with left leg behind right.",
+        type: "stretching"
     },
     {
         id: "C20",
@@ -341,6 +381,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C20.svg",
         description: "30s. Lie on side with knees bent and hold top foot with same-side hand. Pull heel in toward buttock, keeping knees in line and hip pressed forward.",
+        type: "stretching"
     },
     {
         id: "C21",
@@ -348,6 +389,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C21.svg",
         description: "30s. Left Side now.",
+        type: "stretching"
     },
     {
         id: "C22",
@@ -355,6 +397,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C22.svg",
         description: "30s. Grasp hands underneath knee joint of right leg and bring knee to chest.",
+        type: "stretching"
     },
     {
         id: "C23",
@@ -362,6 +405,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C23.svg",
         description: "30s. Repeat with other leg.",
+        type: "stretching"
     },
     {
         id: "C24",
@@ -369,6 +413,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C24.svg",
         description: "30s. With head raised up and lower back slightly arched, tuck chin to chest and round back toward ceiling. Hold the arched and round back positions briefly.",
+        type: "stretching"
     },
     {
         id: "C25",
@@ -376,6 +421,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C25.svg",
         description: "30s. Lie on back and gently pull right foot and knee toward right shoulder.",
+        type: "stretching"
     },
     {
         id: "C26",
@@ -383,6 +429,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C26.svg",
         description: "30s. Left side now.",
+        type: "stretching"
     },
     {
         id: "C27",
@@ -390,6 +437,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C27.svg",
         description: "30s. Place soles of feet flat together. Gently lean forward and push down on knees with forearms.",
+        type: "stretching"
     },
     {
         id: "C28",
@@ -397,6 +445,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C28.svg",
         description: "30s. With legs apart, knees straight and back straight, slide hands forward.",
+        type: "stretching"
     },
     {
         id: "C29",
@@ -404,6 +453,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C29.svg",
         description: "30s. Place left leg over right and bring right arm to the outside of left leg. Press left leg across body with right elbow. Turn head and look over left shoulder.",
+        type: "stretching"
     },
     {
         id: "C30",
@@ -411,6 +461,7 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C30.svg",
         description: "30s. Right Side Now.",
+        type: "stretching"
     },
     {
         id: "C31",
@@ -418,26 +469,22 @@ let stretching = [
         unity: " segs",
         image: "./Images/3_stretching/C31.svg",
         description: "For 1 minute, stretch your neck against the wall.",
-    }
-];
-
-let post_workout = [
+        type: "stretching"
+    },
     {
         id: "D01",
         title: "Breathing Exercise",
         unity: " reps",
         image: "./Images/4_postWorkout/D01.svg",
-        description: "The method stimulates the nervous system, improves circulation, and increases energy. It involves deep, controlled breaths followed by full exhales, repeated several times."
+        description: "The method stimulates the nervous system, improves circulation, and increases energy. It involves deep, controlled breaths followed by full exhales, repeated several times.",
+        type: "extra"
     },
     {
         id: "D02",
         title: "Prayer",
         unity: " reps",
         image: "./Images/4_postWorkout/D02.svg",
-        description: "[Description to be added]"
+        description: "[Description to be added]",
+        type: "extra"
     }
 ]
-
-// Get the total number of exercises from all categories
-const totalExercises = [...warmup, ...workout, ...stretching, ...post_workout].length;
-

@@ -10,108 +10,95 @@
 	<!-- Import CSS -->
 	<link rel="stylesheet" href="./styles.css">
 
-	<!-- Importing Exercises -->
-	<script src="./exercise_list.js"></script>
-
-	<title> Workout </title>
-	<br>
+	<title> Workout Tracker </title>
 	
 </head>
 
 <body>
 
-	<h2>Workout</h2>
-	<hr>
+    <h1>Workout Tracker</h1>
 
-	<div class="text">
+    <div class="table-container">
+        <table id="exercise-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="exercise-body">
+                <!-- JS will fill this -->
+            </tbody>
+        </table>
+        <br><br><br><br><br><br><br><br><br><br>
+    </div>
 
-		<p>
-			This workout routine is a combination of cardio and strength training exercises. The first part of
-			the routine focuses on jump rope or jumping jacks for 10 minutes to warm up, followed by a series of rotations
-			and expansions for various body parts including the shoulders, arms, torso, neck, and hips.
-		</p>
-	
-		<p>
-			The workout section includes exercises for various muscle groups, such as squats, pull ups, handstand push ups,
-			leg raises, push ups, chin ups, dips, and planks. These exercises will help to build strength and improve
-			overall fitness.
-		</p>
-	
-		<p>
-			The stretching portion of the routine includes a variety of stretches for the neck, arms, shoulders, core,
-			chest, legs, and back. These stretches will help to increase flexibility, reduce muscle soreness, and improve
-			range of motion. It's important to stretch after each workout to help prevent injury and improve recovery.
-		</p>
-	
-		<p>
-			Overall, this workout routine provides a well-rounded fitness program that can help to improve your overall
-			health and fitness levels. However, it's always important to check with a doctor before starting a new exercise
-			routine, especially if you have any pre-existing medical conditions.
-		</p>
-	
-		<p>
-			There are some audios bellow to download so you can do the entire routine with a robotic voice that sets the pace of the
-			exercise.
-			At the end, i have puted the Win Hof Breathing exercise, narrated by the man himself. The only diference
-			between
-			this audios are the soundtrack.
-		</p>
+    <script src="./exercise_list.js"></script>
+    <script>
+        
+        const tbody = document.getElementById("exercise-body");
 
-		
+        exercise_list.forEach(ex => {
+            const row = document.createElement("tr");
 
-	</div>
+            const checkboxCount = ex.type === "workout" ? 3 : 1;
+
+            row.innerHTML = `
+                <td>
+                    <img src="${ex.image}" alt="${ex.title}">
+                </td>
+
+                <td>
+                    <button class="progress-btn" data-current="0" data-max="${checkboxCount}">
+                        0/${checkboxCount}
+                    </button>
+                </td>
+
+                <td>
+                    <strong>${ex.title}</strong><br>
+                    <small>${ex.description}</small>
+                </td>
+            `;
+
+            tbody.appendChild(row);
+        });
 
 
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("progress-btn")) {
 
-	<div style="columns: 3;display: flex;justify-content: space-between;align-items: flex-start;">
+        const btn = e.target;
+        const row = btn.closest("tr");
 
-		<ul>
-			<h3>Fontes:</h3>
-			<li><a href="http://www.startbodyweight.com/p/simple-dynamic-warm-up.html" target="_blank">WarmUp</a></li>
-			<li><a href="http://www.startbodyweight.com/p/start-bodyweight-basic-routine.html" target="_blank">Calisthenics</a></li>
-			<li><a href="./PDFs/fff.pdf" target="_blank">Streaching</a></li>
+        let current = parseInt(btn.dataset.current);
+        const max = parseInt(btn.dataset.max);
 
-		</ul>
+        current++;
 
-		<ul>
-			<h3>Poster:</h3>
-			<li><a href="./poster.html" target="_blank">HTML</a></li>
-			<li><a href="./PDFs/TreinoA1.pdf" target="_blank">PDF (A1)</a></li>
-			<li><a href="./PDFs/TreinoA2.pdf" target="_blank">PDF (A2)</a></li>
-		</ul>
+        if (current > max) current = 0;
 
-		<ul>
-			<h3>Parts:</h3>
-			<li><a href="#warmup">A - WarmUp</a></li>
-			<li><a href="#workout">B - Calisthenics</a></li>
-			<li><a href="#stretching">C - Streaching</a></li>
-		</ul>
+        btn.dataset.current = current;
+        btn.innerText = `${current}/${max}`;
 
-	</div>
+        const tbody = document.getElementById("exercise-body");
 
-	<br><h1><a href="./tracker/tracker.html">Click here and use the Tracker to do the dayli exercises</a></h1><br>
+        if (current === max) {
+            btn.style.background = "#0f0";
+            btn.style.color = "#000";
 
-	<div class="warmup">
-		<h1 id="warmup_title">WarmUp</h1>
-		<hr>
-	</div>
+            // ✅ ONLY move when fully completed
+            tbody.appendChild(row);
 
-	<div class="workout">
-		<h1 id="workout_title">Workout</h1>
-		<hr>
-	</div>
+        } else {
+            btn.style.background = "#111";
+            btn.style.color = "#fff";
 
-	<div class="stretching">
-		<h1 id="stretching_title">Streching</h1>
-		<hr>
-	</div>
+            // ❌ Do not move anything here
+        }
+    }
+});    </script>
 
-	<br>
-	<br>
- 
-	<script src="./exercise_render.js"></script>
-
-	
 </body>
 
 <footer>
