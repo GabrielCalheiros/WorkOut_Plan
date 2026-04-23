@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 
 <!-- Head 	-->
+
 <head>
 
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/jpg" href="./Images/favicon.svg" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/jpg" href="./Images/favicon.svg" />
 
-	<!-- Import CSS -->
-	<link rel="stylesheet" href="./styles.css">
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="./styles.css">
 
-	<title> Workout Tracker </title>
-	
+    <title>Workout Tracker</title>
+
 </head>
 
 <body>
@@ -31,78 +32,16 @@
                 <!-- JS will fill this -->
             </tbody>
         </table>
-        <br><br><br><br><br><br><br><br><br><br>
+
     </div>
 
     <script src="./exercise_list.js"></script>
-    <script>
-        
-        const tbody = document.getElementById("exercise-body");
-
-        exercise_list.forEach(ex => {
-            const row = document.createElement("tr");
-
-            const checkboxCount = ex.type === "workout" ? 3 : 1;
-
-            row.innerHTML = `
-                <td>
-                    <img src="${ex.image}" alt="${ex.title}">
-                </td>
-
-                <td>
-                    <button class="progress-btn" data-current="0" data-max="${checkboxCount}">
-                        0/${checkboxCount}
-                    </button>
-                </td>
-
-                <td>
-                    <strong>${ex.title}</strong><br>
-                    <small>${ex.description}</small>
-                </td>
-            `;
-
-            tbody.appendChild(row);
-        });
-
-
-document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("progress-btn")) {
-
-        const btn = e.target;
-        const row = btn.closest("tr");
-
-        let current = parseInt(btn.dataset.current);
-        const max = parseInt(btn.dataset.max);
-
-        current++;
-
-        if (current > max) current = 0;
-
-        btn.dataset.current = current;
-        btn.innerText = `${current}/${max}`;
-
-        const tbody = document.getElementById("exercise-body");
-
-        if (current === max) {
-            btn.style.background = "#0f0";
-            btn.style.color = "#000";
-
-            // ✅ ONLY move when fully completed
-            tbody.appendChild(row);
-
-        } else {
-            btn.style.background = "#111";
-            btn.style.color = "#fff";
-
-            // ❌ Do not move anything here
-        }
-    }
-});    </script>
+    <script src="./exercise_render.js"></script>
 
 </body>
 
 <footer>
-
+    <button class="reset-btn" onclick="resetWorkout()"><strong>Reset Workout</strong></button>
 </footer>
 
 </html>
