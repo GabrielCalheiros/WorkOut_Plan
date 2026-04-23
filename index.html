@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 
-<!-- Head 	-->
+    <!-- Head 	-->
+    <head>
 
-<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/jpg" href="./Images/favicon.svg" />
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/jpg" href="./Images/favicon.svg" />
+        <!-- Import CSS -->
+        <link rel="stylesheet" href="./styles.css">
 
-    <!-- Import CSS -->
-    <link rel="stylesheet" href="./styles.css">
+        <title>Workout Tracker</title>
 
-    <title>Workout Tracker</title>
+    </head>
 
-</head>
+    <!-- Body -->
+    <body>
 
-<body>
+        <h1>Workout Tracker</h1>
 
-    <h1>Workout Tracker</h1>
+        <div class="table-container">
+            <table id="exercise-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="exercise-body">
+                    <!-- JS will fill this -->
+                </tbody>
+            </table>
 
-    <div class="table-container">
-        <table id="exercise-table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="exercise-body">
-                <!-- JS will fill this -->
-            </tbody>
-        </table>
+        </div>
 
-    </div>
+        <script src="./exercise_list.js"></script>
+        <script src="./exercise_render.js"></script>
 
-    <script src="./exercise_list.js"></script>
-    <script src="./exercise_render.js"></script>
+    </body>
 
-</body>
-
-<footer>
-    <button class="reset-btn" onclick="resetWorkout()"><strong>Reset Workout</strong></button>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <button class="reset-btn" onclick="resetWorkout()"><strong>Reset Workout</strong></button>
+    </footer>
 
 </html>
