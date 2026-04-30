@@ -150,7 +150,7 @@ let exercise_list = [
         image: "./Images/2_chalistenics/B5.svg",
         description: "8x. Description Not Needed",
         type: "workout",
-        sets: 3,
+        sets: 1,
     },
     {
         id: "B06",
@@ -159,7 +159,7 @@ let exercise_list = [
         image: "./Images/2_chalistenics/B6.svg",
         description: "8x. Description Not Needed",
         type: "workout",
-        sets: 3,
+        sets: 1,
     },
     {
         id: "B07",
